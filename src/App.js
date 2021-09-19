@@ -18,7 +18,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header />
-      <Container display="flex" justifyContent="center" pt="5">
+      <Container display="flex" justifyContent="center" pt={7}>
         <SavingSims />
       </Container>
     </ThemeProvider>
