@@ -18,6 +18,8 @@ const Text = styled('p')`
   ${typography}
 `;
 
+Text.displayName = 'Text';
+
 Text.defaultProps = {
   as: 'p',
 };
