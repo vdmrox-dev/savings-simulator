@@ -1,12 +1,11 @@
 import WebFont from 'webfontloader';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from './common/GlobalStyle';
-import { theme } from './common/theme';
+import GlobalStyle from 'common/GlobalStyle';
+import { theme } from 'common/theme';
 
-import Header from './common/components/Header';
-import Container from './common/components/Container';
-import SavingSims from './SavingsSims';
+import { Container, Header } from 'common/components';
+import SavingSims from 'SavingsSims';
 
 export default function App() {
   WebFont.load({
