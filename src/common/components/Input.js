@@ -8,11 +8,11 @@ import { Box } from 'common/components';
 
 const BaseInput = styled('input').attrs((props) => ({
   fontFamily: 'Rubik',
-  border: 'none',
   fontWeight: '500',
-  color: 'blueGray600',
-  type: props.type || 'text',
   fontSize: props.fontSize || 5,
+  color: 'blueGray600',
+  border: 'none',
+  type: props.type || 'text',
 }))`
   ${border}
   ${color}
@@ -20,9 +20,10 @@ const BaseInput = styled('input').attrs((props) => ({
   ${space}
   ${typography}
   outline: none;
+  width: 100%;
 `;
 
-function Input({ type, fontSize, isCurrency, ...props }) {
+function Input({ fontSize, isCurrency, type }) {
   return (
     <Box
       border="solid 1px"
@@ -31,17 +32,22 @@ function Input({ type, fontSize, isCurrency, ...props }) {
       display="flex"
       alignItems="center"
       p={3}
+      height="3.5rem"
     >
-      {isCurrency && (
-        <Box pr={3}>
-          <Dollar />
-        </Box>
+      {isCurrency ? (
+        <>
+          <Box pr={3}>
+            <Dollar />
+          </Box>
+          <NumberFormat
+            thousandSeparator=","
+            decimalSeparator="."
+            customInput={BaseInput}
+          />
+        </>
+      ) : (
+        <BaseInput type={type} fontSize={fontSize} />
       )}
-      <NumberFormat
-        thousandSeparator=","
-        decimalSeparator="."
-        customInput={BaseInput}
-      />
     </Box>
   );
 }
@@ -49,14 +55,14 @@ function Input({ type, fontSize, isCurrency, ...props }) {
 Input.displayName = 'Input';
 
 Input.defaultProps = {
-  isCurrency: false,
   fontSize: 5,
+  isCurrency: false,
   type: 'text',
 };
 
 Input.propTypes = {
-  isCurrency: PropTypes.bool,
   fontSize: PropTypes.number,
+  isCurrency: PropTypes.bool,
   type: PropTypes.oneOf(['date', 'email', 'text', 'tel', 'number', 'password']),
 };
 

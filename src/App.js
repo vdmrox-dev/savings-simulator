@@ -5,7 +5,7 @@ import GlobalStyle from 'common/GlobalStyle';
 import { theme } from 'common/theme';
 
 import { Container, Header } from 'common/components';
-import SavingSims from 'SavingsSims';
+import SavingSims from 'SavingSims';
 
 export default function App() {
   WebFont.load({
