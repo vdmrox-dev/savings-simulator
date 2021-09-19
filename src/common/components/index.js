@@ -10,3 +10,6 @@ export { default as Container } from './Container';
 // Typography
 export { default as Heading } from './Heading';
 export { default as CardHeader } from './CardHeader';
+
+// Input
+export { default as Input } from './Input';

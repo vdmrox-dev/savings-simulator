@@ -1,5 +1,9 @@
-import { Box } from 'common/components';
+import { Box, Input } from 'common/components';
 
-export default function SimsForm() {
-  return <Box>Sims form</Box>;
+export default function SimsForm({ ...props }) {
+  return (
+    <Box {...props}>
+      <Input isCurrency />
+    </Box>
+  );
 }
