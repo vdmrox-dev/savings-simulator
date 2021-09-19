@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react-hooks"],
+  "rules": {
+    "camelcase": [1, { "ignoreDestructuring": true, "properties": "never" }],
+    "consistent-return": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "react/jsx-uses-react": 0,
+    "react/react-in-jsx-scope": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": [
+      1,
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react-hooks/rules-of-hooks": "error"
+  },
+  "settings": {
+    "import/extensions": [".js", ".png"]
+  },
+  "globals": {
+    "afterEach": true,
+    "beforeEach": true,
+    "context": true,
+    "describe": true,
+    "document": true,
+    "expect": true,
+    "it": true,
+    "jest": true,
+    "xit": true
+  }
+}
