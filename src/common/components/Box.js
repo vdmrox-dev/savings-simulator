@@ -16,7 +16,7 @@ import {
   typography,
 } from 'styled-system';
 
-const BoxWrapper = styled('div')`
+const Box = styled('div')`
   ${color}
   ${background}
   ${border}
@@ -31,16 +31,31 @@ const BoxWrapper = styled('div')`
   ${typography}
 `;
 
-BoxWrapper.displayName = 'Box';
+Box.displayName = 'Box';
 
-export default function Box({ children, ...props }) {
-  return (
-    <BoxWrapper as="div" {...props}>
-      {children}
-    </BoxWrapper>
-  );
-}
+Box.defaultProps = {
+  as: 'div',
+};
 
 Box.propTypes = {
-  children: PropTypes.node.isRequired,
+  as: PropTypes.oneOf([
+    'aside',
+    'article',
+    'div',
+    'dd',
+    'dl',
+    'dt',
+    'figure',
+    'footer',
+    'header',
+    'hgroup',
+    'label',
+    'li',
+    'main',
+    'span',
+    'nav',
+    'section',
+  ]),
 };
+
+export default Box;

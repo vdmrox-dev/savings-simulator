@@ -5,7 +5,7 @@ export const theme = {
     neutralWhite: '#fff',
 
     brandColorPrimary: '#1B31A8',
-    brandColorSecondary: '#1B31A8',
+    brandColorSecondary: '#0079FF',
 
     blueGray10: '#F4F8FA',
     blueGray50: '#E9EEF2',

@@ -1,5 +1,5 @@
-import Box from './Box';
-import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
+import { Box } from 'common/components';
+import { ReactComponent as Logo } from 'assets/icons/logo.svg';
 
 export default function Header() {
   return (
