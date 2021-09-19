@@ -10,7 +10,7 @@ export default function SimsWrapper() {
         title="Buy a house"
         subTitle="Saving goal"
       />
-      <SimsForm />
+      <SimsForm mt={5} />
     </Card>
   );
 }

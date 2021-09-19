@@ -9,15 +9,16 @@ import {
   typography,
 } from 'styled-system';
 
-const Heading = styled('h1')`
+const Heading = styled('h1').attrs((props) => ({
+  fontSize: props.fontSize || 5,
+  fontWeight: props.fontWeight || 500,
+}))`
   ${color}
   ${layout}
   ${overflow}
   ${position}
   ${space}
   ${typography}
-  font-size: ${(props) => props.fontSize || 4};
-  font-weight: ${(props) => props.fontWeight || 500};
 `;
 
 Heading.displayName = 'Heading';

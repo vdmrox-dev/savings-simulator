@@ -9,7 +9,7 @@ export default function CardHeader({ icon, title, subTitle }) {
         <Heading pb={1} m={0}>
           {title}
         </Heading>
-        <Text fontFamily="Work Sans" fontSize={3} color="blueGray400">
+        <Text fontFamily="Work Sans" fontSize={2} color="blueGray400">
           {subTitle}
         </Text>
       </Box>
