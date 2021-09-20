@@ -9,7 +9,7 @@ import { Box } from 'common/components';
 const BaseInput = styled('input').attrs((props) => ({
   fontFamily: 'Rubik',
   fontWeight: '500',
-  fontSize: props.fontSize || 5,
+  fontSize: props.fontSize || [4, null, 5],
   color: 'blueGray600',
   border: 'none',
   type: props.type || 'text',
@@ -33,10 +33,12 @@ function Input({ fontSize, isCurrency, type }) {
       alignItems="center"
       p={3}
       height="3.5rem"
+      fontSize={fontSize}
+      overflow="hidden"
     >
       {isCurrency ? (
         <>
-          <Box pr={3}>
+          <Box pt={1} pr={3}>
             <Dollar />
           </Box>
           <NumberFormat

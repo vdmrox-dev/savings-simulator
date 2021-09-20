@@ -6,7 +6,7 @@ import { Box, Text } from 'common/components';
 export default function SimsResult({ monthlyAmount, ...props }) {
   return (
     <Box
-      px={5}
+      px={[4, null, 5]}
       py={4}
       border="solid 1px"
       borderColor="blueGray50"
@@ -18,9 +18,9 @@ export default function SimsResult({ monthlyAmount, ...props }) {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        pb={4}
+        pb={[4]}
       >
-        <Text fontSize={4}>Monthly amount</Text>
+        <Text fontSize={[3, null, 4]}>Monthly amount</Text>
         <Text
           fontFamily="Rubik"
           color="brandColorSecondary"
@@ -36,7 +36,7 @@ export default function SimsResult({ monthlyAmount, ...props }) {
           />
         </Text>
       </Box>
-      <Box pt={4}>
+      <Box pt={4} textAlign={['center', null, 'left']}>
         <Text fontSize={0} lineHeight="1rem">
           You’re planning{' '}
           <Text as="span" fontWeight="600">
@@ -48,7 +48,7 @@ export default function SimsResult({ monthlyAmount, ...props }) {
           </Text>{' '}
           goal by{' '}
           <Text as="span" fontWeight="600">
-            October 2020.
+            October&nbsp;2020.
           </Text>
         </Text>
       </Box>

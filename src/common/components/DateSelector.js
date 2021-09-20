@@ -13,6 +13,7 @@ export default function DateSelector() {
       height="3.5rem"
       py={3}
       px={2}
+      overflow="hidden"
     >
       <Box
         display="flex"
@@ -24,10 +25,10 @@ export default function DateSelector() {
           <ArrowLeft />
         </IconButton>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Box fontSize={2} lineHeight="1.5rem" fontWeight="600">
+          <Box fontSize={[1, null, 2]} lineHeight="1.5rem" fontWeight="600">
             October
           </Box>
-          <Box fontSize={2} lineHeight="1.5rem" fontWeight="400">
+          <Box fontSize={[1, null, 2]} lineHeight="1.5rem" fontWeight="400">
             2021
           </Box>
         </Box>

@@ -1,5 +1,5 @@
 export const theme = {
-  breakpoints: ['22.5em', '90em'],
+  breakpoints: ['22.5em', '40em', '90em'],
 
   colors: {
     neutralWhite: '#fff',
