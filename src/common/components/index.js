@@ -19,3 +19,4 @@ export { default as DateSelector } from './DateSelector';
 // Buttons
 export { default as BaseButton } from './BaseButton';
 export { default as IconButton } from './IconButton';
+export { default as Button } from './Button';

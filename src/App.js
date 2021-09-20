@@ -10,7 +10,7 @@ import SavingSims from 'SavingSims';
 export default function App() {
   WebFont.load({
     google: {
-      families: ['Work Sans:300,400,500,600', 'Rubik:300,400,500,600'],
+      families: ['Rubik:300,400,500,600', 'Work Sans:300,400,500,600'],
     },
   });
 

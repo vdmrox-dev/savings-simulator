@@ -5,7 +5,7 @@ import { Box, Text } from 'common/components';
 function FormField({ field, label, ...props }) {
   return (
     <Box display="flex" flexDirection="column" fontSize={1} {...props}>
-      <Text as="label" lineHeight={2} pb={0}>
+      <Text as="label" pb={2}>
         {label}
       </Text>
       {field}

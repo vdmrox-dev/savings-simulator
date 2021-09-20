@@ -11,7 +11,7 @@ const globalStyle = createGlobalStyle`
 html {
   color: ${(props) => props.theme.colors.blueGray900};
   background-color: ${(props) => props.theme.colors.blueGray10};
-  font-family: Rubik, 'Work Sans', sans-serif;
+  font-family: 'Work Sans', Rubik, sans-serif;
   font-size: 100%;
 }
 
