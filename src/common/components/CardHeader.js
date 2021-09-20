@@ -6,10 +6,10 @@ export default function CardHeader({ icon, title, subTitle }) {
     <Box display="flex" alignItems="center">
       <Box>{icon}</Box>
       <Box display="flex" flexDirection="column" pl={3}>
-        <Heading fontFamily="Rubik" pb={1} m={0}>
+        <Heading fontFamily="Rubik" fontSize={[4, null, 5]} pb={1} m={0}>
           {title}
         </Heading>
-        <Text fontSize={2} color="blueGray400">
+        <Text fontSize={[1, null, 2]} color="blueGray400">
           {subTitle}
         </Text>
       </Box>

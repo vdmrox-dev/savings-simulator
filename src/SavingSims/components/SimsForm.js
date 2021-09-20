@@ -8,15 +8,20 @@ import {
 
 export default function SimsForm({ ...props }) {
   return (
-    <Box {...props} display="flex" justifyContent="space-between">
+    <Box
+      {...props}
+      display={['block', null, 'flex']}
+      justifyContent="space-between"
+    >
       <Amount
-        width={7 / 12}
+        width={[1, null, 7 / 12]}
         label="Total amount"
         field={<Input isCurrency />}
         mr={3}
       />
       <ReachDate
-        width={5 / 12}
+        mt={[3, null, 0]}
+        width={[1, null, 5 / 12]}
         label="Reach goal by"
         field={<DateSelector />}
       />
