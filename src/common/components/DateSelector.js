@@ -24,8 +24,12 @@ export default function DateSelector() {
           <ArrowLeft />
         </IconButton>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Box>October</Box>
-          <Box>2021</Box>
+          <Box fontSize={2} lineHeight="1.5rem" fontWeight="600">
+            October
+          </Box>
+          <Box fontSize={2} lineHeight="1.5rem" fontWeight="400">
+            2021
+          </Box>
         </Box>
         <IconButton>
           <ArrowRight />
