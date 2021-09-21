@@ -23,7 +23,7 @@ const BaseInput = styled('input').attrs((props) => ({
   width: 100%;
 `;
 
-function Input({ fontSize, isCurrency, type }) {
+function Input({ fontSize, isCurrency, type, onChangeCallback }) {
   return (
     <Box
       border="solid 1px"
@@ -42,13 +42,20 @@ function Input({ fontSize, isCurrency, type }) {
             <Dollar />
           </Box>
           <NumberFormat
+            onValueChange={(values) => onChangeCallback(values.value)}
             thousandSeparator=","
             decimalSeparator="."
             customInput={BaseInput}
+            fixedDecimalScale={true}
+            decimalScale={2}
           />
         </>
       ) : (
-        <BaseInput type={type} fontSize={fontSize} />
+        <BaseInput
+          onChange={(value) => onChangeCallback(value)}
+          type={type}
+          fontSize={fontSize}
+        />
       )}
     </Box>
   );
@@ -65,6 +72,7 @@ Input.defaultProps = {
 Input.propTypes = {
   fontSize: PropTypes.number,
   isCurrency: PropTypes.bool,
+  onChangeCallback: PropTypes.func.isRequired,
   type: PropTypes.oneOf(['date', 'email', 'text', 'tel', 'number', 'password']),
 };
 

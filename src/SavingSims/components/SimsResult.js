@@ -1,9 +1,25 @@
-import PropType from 'prop-types';
+import { useEffect, useState } from 'react';
 import NumberFormat from 'react-number-format';
+
+import { useSimulationContext } from '../context/simulation';
 
 import { Box, Text } from 'common/components';
 
-export default function SimsResult({ monthlyAmount, ...props }) {
+export default function SimsResult({ ...props }) {
+  const [{ deposits, reachDate, totalAmount }] = useSimulationContext();
+  const [monthlyAmount, setMonthlyAmount] = useState(0);
+
+  const handleMonthlyAmount = () => {
+    const divider = deposits === 0 ? 1 : deposits;
+    const monthlyValue = totalAmount / divider;
+    setMonthlyAmount(monthlyValue);
+  };
+
+  useEffect(() => {
+    handleMonthlyAmount();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [totalAmount, deposits]);
+
   return (
     <Box
       px={[4, null, 5]}
@@ -29,10 +45,12 @@ export default function SimsResult({ monthlyAmount, ...props }) {
         >
           <NumberFormat
             displayType="text"
-            value={monthlyAmount}
+            value={monthlyAmount || 0}
             prefix="$"
             thousandSeparator=","
             decimalSeparator="."
+            fixedDecimalScale={true}
+            decimalScale={2}
           />
         </Text>
       </Box>
@@ -40,22 +58,24 @@ export default function SimsResult({ monthlyAmount, ...props }) {
         <Text fontSize={0} lineHeight="1rem">
           You’re planning{' '}
           <Text as="span" fontWeight="600">
-            48 monthly deposits
+            {deposits} monthly deposits
           </Text>{' '}
           to reach your{' '}
           <Text as="span" fontWeight="600">
-            $25,000
+            <NumberFormat
+              displayType="text"
+              value={totalAmount || 0}
+              prefix="$"
+              thousandSeparator=","
+              decimalSeparator="."
+            />
           </Text>{' '}
-          goal by{' '}
+          goal by
           <Text as="span" fontWeight="600">
-            October&nbsp;2020.
+            &nbsp;{reachDate}.
           </Text>
         </Text>
       </Box>
     </Box>
   );
 }
-
-SimsResult.propTypes = {
-  monthlyAmount: PropType.number.isRequired,
-};

@@ -14,7 +14,7 @@ export default function SimsWrapper() {
           subTitle="Saving goal"
         />
         <SimsForm mt={[3, null, 4]} />
-        <SimsResult monthlyAmount={521} mt={4} />
+        <SimsResult mt={4} />
         <Box width="100%" textAlign="center" mt={5}>
           <Button mx="auto" label="Confirm" />
         </Box>
