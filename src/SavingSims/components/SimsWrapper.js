@@ -7,7 +7,7 @@ import SimsResult from './SimsResult';
 export default function SimsWrapper() {
   return (
     <Card>
-      <Box px={[4, null, 6]} pt={[4, null, 6]} pb={0}>
+      <Box p={[4, null, 6]}>
         <CardHeader
           icon={<BuyHouse />}
           title="Buy a house"
@@ -15,9 +15,9 @@ export default function SimsWrapper() {
         />
         <SimsForm mt={[3, null, 4]} />
         <SimsResult monthlyAmount={521} mt={4} />
-      </Box>
-      <Box width="100%" textAlign="center" mt={5} mb={6}>
-        <Button mx="auto" label="Confirm" />
+        <Box width="100%" textAlign="center" mt={5}>
+          <Button mx="auto" label="Confirm" />
+        </Box>
       </Box>
     </Card>
   );

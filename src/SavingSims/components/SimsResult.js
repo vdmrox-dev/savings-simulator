@@ -25,7 +25,7 @@ export default function SimsResult({ monthlyAmount, ...props }) {
           fontFamily="Rubik"
           color="brandColorSecondary"
           fontWeight="500"
-          fontSize={6}
+          fontSize={[5, null, 6]}
         >
           <NumberFormat
             displayType="text"
