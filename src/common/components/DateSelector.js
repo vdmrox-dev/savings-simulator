@@ -95,10 +95,20 @@ export default function DateSelector({ onDateChange }) {
           flexDirection="column"
           alignItems="center"
         >
-          <Box fontSize={[1, null, 2]} lineHeight="1.5rem" fontWeight="600">
+          <Box
+            data-testid="selectedMonth"
+            fontSize={[1, null, 2]}
+            lineHeight="1.5rem"
+            fontWeight="600"
+          >
             {selectedMonth}
           </Box>
-          <Box fontSize={[1, null, 2]} lineHeight="1.5rem" fontWeight="400">
+          <Box
+            data-testid="selectedYear"
+            fontSize={[1, null, 2]}
+            lineHeight="1.5rem"
+            fontWeight="400"
+          >
             {selectedYear}
           </Box>
         </Box>

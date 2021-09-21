@@ -38,6 +38,7 @@ export default function SimsForm({ ...props }) {
         label="Total amount"
         field={
           <Input
+            alt="totalAmount"
             onChangeCallback={(value) => {
               handleInputChange(value);
             }}

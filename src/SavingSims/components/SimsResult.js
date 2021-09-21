@@ -51,6 +51,7 @@ export default function SimsResult({ ...props }) {
             decimalSeparator="."
             fixedDecimalScale={true}
             decimalScale={2}
+            data-testid="monthlyAmount"
           />
         </Text>
       </Box>
