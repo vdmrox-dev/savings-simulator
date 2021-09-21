@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import dayjs from 'dayjs';
 
 import { Box, IconButton } from 'common/components';
