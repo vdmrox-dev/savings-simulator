@@ -13,6 +13,7 @@ const StyledButton = styled(BaseButton).attrs(() => ({
   fontSize: 2,
   fontWeight: '600',
 }))`
+  cursor: pointer;
   text-align: center;
 `;
 
