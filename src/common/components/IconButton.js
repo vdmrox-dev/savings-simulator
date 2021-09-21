@@ -9,11 +9,11 @@ const StyledIconButton = styled(BaseButton).attrs(() => ({
   appearance: none;
   border: none;
   background: none;
-  cursor: pointer;
+  cursor: ${(props) => (props.disable ? 'not-allowed' : 'pointer')};
 `;
 
-export default function IconButton({ children }) {
-  return <StyledIconButton>{children}</StyledIconButton>;
+export default function IconButton({ children, ...props }) {
+  return <StyledIconButton {...props}>{children}</StyledIconButton>;
 }
 
 IconButton.propTypes = {
