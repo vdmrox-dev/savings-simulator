@@ -23,7 +23,7 @@ const BaseInput = styled('input').attrs((props) => ({
   width: 100%;
 `;
 
-function Input({ fontSize, isCurrency, type, onChangeCallback }) {
+function Input({ fontSize, isCurrency, type, onChangeCallback, ...props }) {
   return (
     <Box
       border="solid 1px"
@@ -48,6 +48,7 @@ function Input({ fontSize, isCurrency, type, onChangeCallback }) {
             customInput={BaseInput}
             fixedDecimalScale={true}
             decimalScale={2}
+            {...props}
           />
         </>
       ) : (
@@ -55,6 +56,7 @@ function Input({ fontSize, isCurrency, type, onChangeCallback }) {
           onChange={(value) => onChangeCallback(value)}
           type={type}
           fontSize={fontSize}
+          {...props}
         />
       )}
     </Box>
